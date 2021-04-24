@@ -1,6 +1,4 @@
-﻿using System.Collections.Generic;
-
-namespace EntityLayer.Concrete
+﻿namespace EntityLayer.Concrete
 {
     public class Writer /* Yazar */
     {

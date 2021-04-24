@@ -10,6 +10,8 @@
 
  ☑️ `Controller`: işin BackEnd tarafıdır yani C# kodlama alanıdır.
 
+ ☑️ İşin `BackEnd` yani `Controller` tarafında veya Class 'larda bir değişiklik gerçekleştirirsek, projemizi yeniden dermemmiz gerekmektedir.
+
 ## 3. Ders Video Notlarım - `Katmanların Oluşturulması`
 
  ☑️ (1) `Entity Layer` : projenin SQL tarafındaki tablolarının ve bu tabloların içerisinde yer alacak sütunların C# tarafında tanımlanacağı Class ve Property olarak gelecek yapıyı tutacak kısımdır.
@@ -32,5 +34,10 @@
 
  ☑️ `Somut` : 5 duyu organımızla algıladığımız, `Soyut` : 5 duyu organımızla algılayamadığımız.
 
- ☑️ Bir sınıfa diğer alanlardan, katmanlardan, sınıflardan vs erişim sağlayabilmek için 'Access Modify' dediğimiz erişim belirleyici türü olarak "public" yazmamız gerekmektedir.
+ ☑️ Bir sınıfa diğer alanlardan, katmanlardan, sınıflardan vs erişim sağlayabilmek için `Access Modify` dediğimiz erişim belirleyici türü olarak `public` yazmamız gerekmektedir.
 
+## 5. Ders Video Notlarım - `Category About Contact Sınıfları`
+
+ ☑️ Category, About, Contact class'ları eklendi.
+
+ ☑️ 
