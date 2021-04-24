@@ -1,3 +1,3 @@
 # .NETFramework Projeleri
 
-## MVC Camp : [Mvc Proje Kampı](https://www.youtube.com/playlist?list=PLKnjBHu2xXNNQJehhCg--CzQQMHXTsFAb)
+## MVC Camp : [Link](https://www.youtube.com/playlist?list=PLKnjBHu2xXNNQJehhCg--CzQQMHXTsFAb)
