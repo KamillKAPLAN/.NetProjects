@@ -88,4 +88,30 @@
 
 ☑️ `IMPORTANT`: VeriTabanı işlemleri bittikten sonra `CRUD` operasyonları için `Repository Design Pattern` kullanacağız.
 
+## 10. Ders Video Notlarım  - `Web Config Yapılandırması ve Bağlantı Ayarı`
 
+☑️ `IMPORTANT`: bu bölümde `Web.config` ayarını gerçekleştiriyoruz. Bu dosya proje ile ilgili bazı yapılandırma ayarlarının yapıldığı kısımdır. Mesela projemizin veri tabanı bağlantı adresi burada tanımlanıyor. Projemizde 404 sayfası ile ilgili ayarlar, projenin oturum ayarları, yetkilendirme ayarları buranın üzerinde gerçekleştiriliyor.
+
+☑️ `name            `: bu isim tablolarımızın veriTabanına yansıtılacağı sınıfın ismi ile aynı olmak zorundadır. 
+
+☑️ `initial catalog `: burası veritabanı ismimizin tutulacağı kısımdır. 	
+
+☑️ `providerName    `: sağlayıcı ismidir. Bizim burada neyin üzerinde çalışacağımızı tanımlamamızı sağlar.
+
+☑️ **Web.config**
+   ```
+     </system.web>
+	<connectionStrings>
+		<!-- name : bu isim tablolarımızın veriTabanına yansıtılacağı sınıfın ismi ile aynı olmak zorundadır. 
+                     initial catalog : burası veritabanı ismimizin tutulacağı kısımdır. 	
+		     providerName : sağlayıcı ismidir. Bizim burada neyin üzerinde çalışacağımızı tanımlamamızı sağlar.
+		-->
+		<add name="Context" 
+                     connectionString="data source=DESKTOP-QSMLA58\KAMILKAPLAN; 
+                                       initial catalog=DbMvcKamp; integrated security=true;" 
+	             providerName="System.Data.SqlClient" />
+	</connectionStrings>	
+    <runtime>
+   ```
+
+## 11. Ders Video Notlarım - `Migrations ve Veri Tabanının Oluşturulması`
