@@ -54,7 +54,8 @@
 
 ☑️ Writer(1) - Heading(n) ilişkilendirilmesi bundan dolayı aşağıdaki gibi bir kod tanımlaması yapılacaktır.
 
-☑️ ``` 
+☑️ **Örnek İlişki**
+   ``` 
     Writer.cs (1)
          /* Heading tablosu ile 1 - n ilişki tanımlama */
          public ICollection<Heading> Headings { get; set; }
@@ -71,3 +72,20 @@
 ☑️ `IMPORTANT`: Bütün sınıflarda tanımlanan Id 'lerin Key olarak atanması gerekmektedir. **Key = Primary Key (Birincil Anahtar)** Her sınıfta muhakkak bir **Key**  olmalı, çünkü bu Key'ler **RelationShip(İlişki)** için kullanılacaktır.
 
 ☑️  **[Key]** kullanabilmek için **System.ComponentModel.DataAnnotations.dll** dahil edilmeli veya **EntityFramework** paketi yüklenmelidir.
+
+## 9. Ders Video Notlarım - `Context Sınıfı`
+
+☑️ `Context Sınıfı` : veritabanına tabloları yansıtmak için kullandığımız sınıf. `DataAccessLayer` katmanında tanımlanır.
+
+☑️ `Context` sınıfının içerisinde tanımlayacağımız property'ler birer tablo ismi olarak SQL'de karşılık bulacaktır. Bu işlem için `DataAccessLayer` katmanı içerisine `EntityFramework 6` paketini kurmamız gerekmektedir.
+
+☑️ **Refrences**
+  ``` 
+    Başka bir katmanın metotlarını, propertylerini, sınıflarını kullanmak istersek. O katmanın kullanmak istediğimiz yere `Refences` olarak eklemek zorundayız. 
+  ```
+
+☑️ `Context` sınıfı içine yazılmış olan DbSet türündeki propert'leri SQL'e birer tablo olarak yansıtılacaktır.
+
+☑️ `IMPORTANT`: VeriTabanı işlemleri bittikten sonra `CRUD` operasyonları için `Repository Design Pattern` kullanacağız.
+
+
