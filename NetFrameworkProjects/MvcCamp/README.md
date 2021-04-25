@@ -180,9 +180,9 @@
 
 ☑️ **Repositories ** : CRUD işlemlerini gerçekleştirebilmek için yapılacak ifadeleri tutmak için kullanılır.
 
-☑️ `EF` 'de değişikliklerin kaydedilmesi için **`ExecuteNonQuery()`** metodu kullanılır.
+☑️ `EF` 'de değişikliklerin kaydedilmesi için **`SaveChanges()`** metodu kullanılır.
 
-☑️ `ADO.NET` 'de değişikliklerin kaydedilmesi için 
+☑️ `ADO.NET` 'de değişikliklerin kaydedilmesi için **`ExecuteNonQuery()`** metodu kullanılır.
 
 ☑️ `EF` ve `ADO.NET` 
   ```
@@ -192,4 +192,22 @@
 
 ## 16. Ders Video Notlarım - `IRepository Interface` 
 
+☑️ **15.Derste yapılan çalışmalar yanlıştır. [Detay için](https://www.youtube.com/watch?v=yFSzJbSbLDI&list=PLKnjBHu2xXNNQJehhCg--CzQQMHXTsFAb&index=15)**
+
+☑️ IRepository Interface
+   ```
+     **/* T : bir Entity 'i karşılar, bir türdür. SQL 'den gönderilecek Entity class'ı */**
+     public interface IRepository<T>
+     {
+         /* CRUD */
+         List<T> GetCategories();
+         void InsertCategory(T p);
+         void UpdateCategory(T p);
+         void DeleteCategory(T p);
+     }
+   ```
+
+## 17. Ders Video Notlarım - `Generic Interface` 
+
+☑️ 
 
