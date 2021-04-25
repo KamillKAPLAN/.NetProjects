@@ -1,4 +1,6 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
+using System.Linq.Expressions;
 
 namespace DataAccessLayer.Abstract
 {
@@ -6,9 +8,10 @@ namespace DataAccessLayer.Abstract
     public interface IRepository<T>
     {
         /* CRUD */
-        List<T> GetCategories();
-        void InsertCategory(T p);
-        void UpdateCategory(T p);
-        void DeleteCategory(T p);
+        List<T> Gets();
+        void Insert(T p);
+        void Update(T p);
+        void Delete(T p);
+        List<T> GetById(Expression<Func<T, bool>> filter);
     }
 }

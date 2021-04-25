@@ -196,7 +196,7 @@
 
 ☑️ IRepository Interface
    ```
-     **/* T : bir Entity 'i karşılar, bir türdür. SQL 'den gönderilecek Entity class'ı */**
+     /* T : bir Entity 'i karşılar, bir türdür. SQL 'den gönderilecek Entity class'ı */
      public interface IRepository<T>
      {
          /* CRUD */
@@ -209,5 +209,9 @@
 
 ## 17. Ders Video Notlarım - `Generic Interface` 
 
-☑️ 
+☑️ Generic Interface üzerine örnekler yapıldı. Bütün **`Entity'ler`** için Abstract klasörü içerisinde Interface tanımlaması gerçekleştirildi.
+
+☑️ IAboutDal.cs, IContactDal.cs, IContentDal.cs, IHeadingDal.cs, IWriterDal.cs **`interface`** tanımları yapıldı.
+
+## 18. Ders Video Notlarım - `Generic Repository` 
 
