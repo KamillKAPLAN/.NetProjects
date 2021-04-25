@@ -137,3 +137,21 @@
 ☑️ 1 Yazar(Writers) 1'den fazla İçerik(Contents) olabilir. `( 1 - n )`
 
 ## 12. Ders Video Notlarım - `Add Migration İşlemi` 
+
+☑️ Bir önceki derste `Migration` hatası aldık bu hatanın sebebi aynı model için birden fazla `Foreign Key` bulunmasından dolayı Foreign Key'lerden birini `Nullable` yaparsak herhangi bir problem çıkmayacak.
+
+☑️ `Nullable Type` : ilgili tip‘in değer aralığına ve karakteristiğine sahip olmakla birlikte ek olarak null değer de içerebilen yapılardır. **`public int? Value { get; set; }`** veya **`public Nullable<int> Valuee { get; set; }`** olarak kullanılır.
+
+☑️ C# sınıfımızda yapmış olduğumuz değişiklikleri SQL'e yansıtmak için **`add-migration <migrationAdi>`** komutu çalıştırılır.
+
+☑️ Yapılan değişiklikleri VeriTabanına yansıtmak için **`update-database`** komutu çalıştırılır.
+
+☑️ /* Değişiklikleri kaydedersek burası gerçekleşecek. */ public override void Up() 
+
+☑️ /* Değişiklikleri kaydetmezsek burası gerçekleşecek. */ public override void Down()
+
+☑️ DataBase Diagram
+
+ <img src="https://github.com/KamillKAPLAN/.NetProjects/ImagesForGitHub/DatabaseDiagram.png" />
+
+## 13. Ders Video Notlarım - `Örnek SQL Veri Girişleri` 
