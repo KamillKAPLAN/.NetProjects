@@ -28,11 +28,11 @@
 
 ☑️  `Entity 'lerin Oluşuturulması` - Tablolar : Heading, Content, Writer, Category, About, Contact
 
-☑️ N Katmanlı mimari üzerinde 'Somut' olarak tutulan ifadeler "Concrete" klasörü içerisinde tutuluyor.
+☑️ N Katmanlı mimari üzerinde **'Somut'** olarak tutulan ifadeler **"Concrete"** klasörü içerisinde tutuluyor.
 
-☑️ N Katmanlı mimari üzerinde 'Soyut' ifadelerde "Abstract" klasörü içerisinde tutuluyor. 
+☑️ N Katmanlı mimari üzerinde **'Soyut'** ifadelerde **"Abstract"** klasörü içerisinde tutuluyor. 
 
-☑️ `Somut` : 5 duyu organımızla algıladığımız, `Soyut` : 5 duyu organımızla algılayamadığımız.
+☑️ **`Somut`** : 5 duyu organımızla algıladığımız, **`Soyut`** : 5 duyu organımızla algılayamadığımız.
 
 ☑️ Bir sınıfa diğer alanlardan, katmanlardan, sınıflardan vs erişim sağlayabilmek için `Access Modify` dediğimiz erişim belirleyici türü olarak `public` yazmamız gerekmektedir.
 
@@ -165,4 +165,17 @@
 ☑️ `Contents` tablosuna data girişi gerçekleştirildi.
 
 ## 14. Ders Video Notlarım - `Abstract Ve Interface Bileşenleri` 
+
+☑️ Bu derste `Abstract` ve `Interface` ifadeler ile çalışmaya başlayacağız. `CRUD` işlemlerinin temelini oluşturacağız. CRUD işlemlerinin temelini Interface'ler üzerinde oluşturacağız.
+
+☑️ `Interface'ler` : sınıflara rehberlik edecek yapılar olarak düşünebiliriz. Interface 'ler içerisinde direkt olarak `property` veya `field` tanımlaması tercihe edilen bir yöntem değildir. Onun yerine `metotlar` oluşturulur ve bu metotlar üzerinde işlemler gerçekleştirilir.
+
+☑️ **`DRY (Don't repeat yourself)`** : yazılım kalıplarının tekrarlanmasını (code duplication) ve buna bağlı olarak ortaya çıkabilecek fazlalıkların / karmaşanın önlenmesini amaçlayan bir yazılım geliştirme ilkesidir.
+
+☑️ `ICategoryDal.cs` içinda CRUD operasyonlarını gerçekleşeceği metotları tanımladık. Bundan sonra yeni bir sınıf oluşturup, oluşturacağımız bu sınıftada `ICategoryDal` içinde tanımlamış olduğumuz metotların görevlerini yazmamız gerekmektedir.
+
+## 15. Ders Video Notlarım - `Repository Sınıfı Ve Metotların İçinin Doldurulması` 
+
+## . Ders Video Notlarım - `` 
+
 
