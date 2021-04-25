@@ -172,10 +172,24 @@
 
 ☑️ **`DRY (Don't repeat yourself)`** : yazılım kalıplarının tekrarlanmasını (code duplication) ve buna bağlı olarak ortaya çıkabilecek fazlalıkların / karmaşanın önlenmesini amaçlayan bir yazılım geliştirme ilkesidir.
 
-☑️ `ICategoryDal.cs` içinda CRUD operasyonlarını gerçekleşeceği metotları tanımladık. Bundan sonra yeni bir sınıf oluşturup, oluşturacağımız bu sınıftada `ICategoryDal` içinde tanımlamış olduğumuz metotların görevlerini yazmamız gerekmektedir.
+☑️ **`ICategoryDal.cs`** içinda CRUD operasyonlarını gerçekleşeceği metotları tanımladık. Bundan sonra yeni bir sınıf oluşturup, oluşturacağımız bu sınıftada `ICategoryDal` içinde tanımlamış olduğumuz metotların görevlerini yazmamız gerekmektedir.
 
 ## 15. Ders Video Notlarım - `Repository Sınıfı Ve Metotların İçinin Doldurulması` 
 
-## . Ders Video Notlarım - `` 
+☑️ Bir önceki derste tanımlamış olduğumuz **Interface** içindeki metotlara görevler tanımlamadık. Bu metotlara birer görev tanımı verilmelidir. **`Concrete\Repositories`** klasörünün içinde tanımlanacak.
+
+☑️ **Repositories ** : CRUD işlemlerini gerçekleştirebilmek için yapılacak ifadeleri tutmak için kullanılır.
+
+☑️ `EF` 'de değişikliklerin kaydedilmesi için **`ExecuteNonQuery()`** metodu kullanılır.
+
+☑️ `ADO.NET` 'de değişikliklerin kaydedilmesi için 
+
+☑️ `EF` ve `ADO.NET` 
+  ```
+   SaveChanges() => ExecuteNonQuery(); --> Update, Delete, Insert Into Islemleri
+   ToList()      => ExecuteReader();   --> Select Islemleri
+ ```
+
+## 16. Ders Video Notlarım - `IRepository Interface` 
 
 
