@@ -222,3 +222,15 @@
 ☑️ `Mimarinin Amacı` : Kod tekrarından kurtulmak, işlemlerin daha düzenli bir şekilde ilerlemesi, böl parçala yönet yaklaşımı ile proje geliştirmektir.
 
 ## 19. Ders Video Notlarım - `Business Layer` 
+
+☑️ **`Business Layer`** : genellikle işin geçerliliğinin ve kuralların kontrolü yapılır. CRUD veya Find işlemleri gerçekleştirilirken gönderdiğimiz şartların sağlanıp sağlanmadığının kontrolü `BusinessLayer'da` yapılır.
+
+☑️ **`BusinessLayer'a`** diğer katmanların referans olarak verilmesi gerekmektedir. `EntityLayer` ve `DataAccessLayer` katmanları referans olarak verilir. Bununla beraber `NuGet` üzerinden `EntityFramework` yüklenmelidir.
+
+☑️ **`EntityLayer'da`** : herhangi bir katman referans verilmiyor.
+
+☑️ **`DataAccessLayer'da`** : `EntityLayer` katmanı referans verilir.
+
+☑️ **`UI'da`** : `BusinessLayer`, `DataAccessLayer` ve `EntityLayer` katmanları **`References`** olarak verilir.
+
+☑️ 
