@@ -1,6 +1,7 @@
-#.NETFRAMEWORK MVC PROJE NOTLARI
+# .NETFRAMEWORK MVC PROJE NOTLARI
  
-##1. ve 2. Ders Video Notlarım - `Giriş Projenin Oluşturulması ve View Controller Ve Layout Kavramları`
+## 1. ve 2. Ders Video Notlarım - `Giriş Projenin Oluşturulması ve View Controller Ve Layout Kavramları`
+
 ☑️ User Interface, Presentation Katmanı
 
 ☑️ `Model` : işin veritabanına ait Entity dediğimiz kavramların tanımlandığı kısımdır.
@@ -11,7 +12,8 @@
 
 ☑️ İşin `BackEnd` yani `Controller` tarafında veya Class 'larda bir değişiklik gerçekleştirirsek, projemizi yeniden dermemmiz gerekmektedir.
 
-##3. Ders Video Notlarım - `Katmanların Oluşturulması`
+## 3. Ders Video Notlarım - `Katmanların Oluşturulması`
+
 ☑️ (1) `Entity Layer` : projenin SQL tarafındaki tablolarının ve bu tabloların içerisinde yer alacak sütunların C# tarafında tanımlanacağı Class ve Property olarak gelecek yapıyı tutacak kısımdır.
 
 ☑️ (2) `Data Access Layer` : veri erişim katmanı olarak geçmektedir. CRUD dediğimiz işlemlerin temeli burada tanımlanacaktır. 
@@ -22,7 +24,7 @@
  
 ☑️  `IMPORTANT` Geliştirme yaklaşımı olarak EntityFramework `CodeFirst` yaklaşımı kullanılacak.
  
-##4. Ders Video Notlarım - `Entity Katmanı Sınıflarının Oluşturulması`
+## 4. Ders Video Notlarım - `Entity Katmanı Sınıflarının Oluşturulması`
 
 ☑️  `Entity 'lerin Oluşuturulması` - Tablolar : Heading, Content, Writer, Category, About, Contact
 
@@ -34,11 +36,11 @@
 
 ☑️ Bir sınıfa diğer alanlardan, katmanlardan, sınıflardan vs erişim sağlayabilmek için `Access Modify` dediğimiz erişim belirleyici türü olarak `public` yazmamız gerekmektedir.
 
-##5. Ders Video Notlarım - `Category About Contact Sınıfları`
+## 5. Ders Video Notlarım - `Category About Contact Sınıfları`
 
 ☑️ Category, About, Contact class'ları eklendi.
 
-##6. Ders Video Notlarım - `İlişkilerin Oluşturulması 1`
+## 6. Ders Video Notlarım - `İlişkilerin Oluşturulması 1`
 
 ☑️ İki tablo arasında `1 - n` ilişki kurmak için `ICollection<T>` türünde bir property tanımlıyoruz. 
 
@@ -48,15 +50,24 @@
 
 ☑️ virtual ifadesini kullandıktan sonra programa şunu diyoruz. Biz bir sınıftan değer alacaz.
 
-##7. Ders Video Notlarım - `İlişkilerin Oluşturulması 2`
+## 7. Ders Video Notlarım - `İlişkilerin Oluşturulması 2`
 
 ☑️ Writer(1) - Heading(n) ilişkilendirilmesi bundan dolayı aşağıdaki gibi bir kod tanımlaması yapılacaktır.
+
 ☑️ ``` 
     Writer.cs (1)
-         /* Heading tablosu ile ilişki tanımlama */
+         /* Heading tablosu ile 1 - n ilişki tanımlama */
          public ICollection<Heading> Headings { get; set; }
     Heading.cs (n)
          /* Writer tablosundaki ilişkili oldugu WriterId değerini almak için tanımlandı. */
          public long WriterId { get; set; }
          public virtual Writer Writer { get; set; }
    ```
+
+## 8. Ders Video Notlarım - `Key Ve String Length Attributeleri`
+
+☑️ `[Key] ve [StringLength(100)] Attribute` : Biz şimdiye kadar sınıflarımızın tamamını tanımladık. Ama tanımlamış olduğumuz `property'lere` herhangi bir kısıtlama uygulamadık. Kısıtlama uygulanmaması bunların `VeriTabanında` çok büyük veri aralıkları ile kaydedilmesine sebebiyet verir.
+
+☑️ `IMPORTANT`: Bütün sınıflarda tanımlanan Id 'lerin Key olarak atanması gerekmektedir. **Key = Primary Key (Birincil Anahtar)** Her sınıfta muhakkak bir **Key**  olmalı, çünkü bu Key'ler **RelationShip(İlişki)** için kullanılacaktır.
+
+☑️  **[Key]** kullanabilmek için **System.ComponentModel.DataAnnotations.dll** dahil edilmeli veya **EntityFramework** paketi yüklenmelidir.
