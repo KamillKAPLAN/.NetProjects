@@ -233,4 +233,10 @@
 
 ☑️ **`UI'da`** : `BusinessLayer`, `DataAccessLayer` ve `EntityLayer` katmanları **`References`** olarak verilir.
 
+## 20. Ders Video Notlarım - `Tablo Kullanımı (Sertifika Görev 1/4)` 
+
+☑️ `CategoryController.cs` tanımı yapıldı ve Index.cshtml `View` oluşturuldu.
+
+## 21. Ders Video Notlarım - `` 
+
 ☑️ 
