@@ -215,3 +215,10 @@
 
 ## 18. Ders Video Notlarım - `Generic Repository` 
 
+☑️ `Generic` bütün bileşenlerin tamamını kapsıyor diye ifade edebiliriz.
+
+☑️ **`Generic Repository`** sınıfın sayesinde bütün sınıflardan, bütün interfacelerde geçerli olan mimari kuruldu.
+
+☑️ `Mimarinin Amacı` : Kod tekrarından kurtulmak, işlemlerin daha düzenli bir şekilde ilerlemesi, böl parçala yönet yaklaşımı ile proje geliştirmektir.
+
+## 19. Ders Video Notlarım - `Business Layer` 
