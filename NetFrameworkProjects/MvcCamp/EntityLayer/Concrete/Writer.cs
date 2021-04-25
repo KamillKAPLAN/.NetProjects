@@ -27,6 +27,6 @@ namespace EntityLayer.Concrete
         public ICollection<Heading> Headings { get; set; }
 
         /* Content tablosu ile 1 - n ilişki tanımlama */
-        public ICollection<Content> Contents { get; set; }
+        //public ICollection<Content> Contents { get; set; }
     }
 }

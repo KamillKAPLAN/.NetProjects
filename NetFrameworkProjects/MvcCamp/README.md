@@ -103,7 +103,7 @@
      </system.web>
 	<connectionStrings>
 		<!-- name : bu isim tablolarımızın veriTabanına yansıtılacağı sınıfın ismi ile aynı olmak zorundadır. 
-                     initial catalog : burası veritabanı ismimizin tutulacağı kısımdır. 	
+             initial catalog : burası veritabanı ismimizin tutulacağı kısımdır. 	
 		     providerName : sağlayıcı ismidir. Bizim burada neyin üzerinde çalışacağımızı tanımlamamızı sağlar.
 		-->
 		<add name="Context" 
@@ -115,3 +115,25 @@
    ```
 
 ## 11. Ders Video Notlarım - `Migrations ve Veri Tabanının Oluşturulması`
+
+☑️ `Migrations` : bu kavram bizim `Code First` yardımı ile oluşturmuş olduğumuz mimarideki değişiklikleri SQL'e yansıtmak için kullanacağımız bir bileşen olarak adlandırırız. `C# ile SQL arasındaki köprü` olarak adlandırabiliriz.
+
+☑️ `View > Other Windows > Package Manager Console` öncelikle migration'ı aktif hale getirmemiz gerekmektedir yani proje içine bir migration eklememiz gerekmektedir. 
+
+☑️ `Package Manager Console` : projemizin referanslarına veya NuGet paketleri içerisine istediğimiz herhangi bir paketi komutlarla kurmamızı sağlayan, komutlarla burada install işlemlerini sağlayan Visual Studio bileşeni olarak adlandırabiliriz. Migration oluşturma işlemi veya yönetimi buradan yapılır.
+
+☑️ Bunu yapabilmek için `Package Manager Console` da veri tabanına yansıtnak için Context sınıfının bağlı olduğu katmanda yapılmalıdır. Bundan dolayı Default Project olarak DataAccessLayer seçilerek **`enable-migrations`** komutu çalıştırılır. 
+
+☑️ Ardından `Migrations > Configuration.cs` dosyasında Migrations lar üzerinde değişiklik yapabilmek için **`AutomaticMigrationsEnable= true`**  olarak ayarlanmalıdır. 
+
+☑️ Bunu yaptıktan sonra tekrar `Package Manager Console` da **`update-database`** komutuyla veri tabanına değişiklikleri yansıtacağız.
+
+☑️ 1 Kategori(Categories) içinde 1'den fazla Başlık(Headings) yer alabilir. `( 1 - n )`
+
+☑️ 1 Yazar(Writers) 1'den fazla Başlık(Headings)'a yazabilir. `( 1 - n )`
+
+☑️ 1 Başlık(Headings)'ta 1'den fazla İçerik(Contents) olabilir. `( 1 - n )`
+
+☑️ 1 Yazar(Writers) 1'den fazla İçerik(Contents) olabilir. `( 1 - n )`
+
+## 12. Ders Video Notlarım - `Add Migration İşlemi` 
