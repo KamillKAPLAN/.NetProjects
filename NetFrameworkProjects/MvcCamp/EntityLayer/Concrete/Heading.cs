@@ -14,6 +14,10 @@ namespace EntityLayer.Concrete
         public long CategoryId { get; set; }
         public virtual Category Category { get; set; }
 
+        /* Writer tablosundaki ilişkili oldugu WriterId değerini almak için tanımlandı. */
+        public long WriterId { get; set; }
+        public virtual Writer Writer { get; set; }
+
         /* Content tablosu ile 1 -n ilişki tanımlama */
         public ICollection<Content> Contents { get; set; }
     }

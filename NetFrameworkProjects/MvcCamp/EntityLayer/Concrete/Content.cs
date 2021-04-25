@@ -11,5 +11,9 @@ namespace EntityLayer.Concrete
         /* Heading tablosundaki ilişkili oldugu HeadingId değerini almak için tanımlandı. */
         public long HeadingId { get; set; }
         public virtual Heading Heading { get; set; }
+
+        /* Writer tablosundaki ilişkili oldugu WriterId değerini almak için tanımlandı. */
+        public long? WriterId { get; set; }
+        public virtual Writer Writer { get; set; }
     }
 }
