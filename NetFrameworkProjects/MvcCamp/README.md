@@ -152,6 +152,17 @@
 
 ☑️ DataBase Diagram
 
- <img src="https://github.com/KamillKAPLAN/.NetProjects/ImagesForGitHub/DatabaseDiagram.png" />
+<img src="https://github.com/KamillKAPLAN/.NetProjects/blob/main/ImagesForGitHub/DatabaseDiagram.png" />           
 
 ## 13. Ders Video Notlarım - `Örnek SQL Veri Girişleri` 
+
+☑️ `Categories` tablosnuna veri girişi yapıldı.
+
+☑️ `Writers` tablosuna veri girişi gerçekleştirildi.
+
+☑️ `Headings` tablosuna veri girişi yapıldı.
+
+☑️ `Contents` tablosuna data girişi gerçekleştirildi.
+
+## 14. Ders Video Notlarım - `Abstract Ve Interface Bileşenleri` 
+
