@@ -9,7 +9,7 @@ namespace DataAccessLayer.Concrete.Repositories
 {
     /* 
      * <T> -> GenericRepository bir tane T değeri alacak
-     * IRepository<T> -> GenericRepository'nin interface olarak değerlerini 
+     * IRepository<T> -> GenericRepository'nin interface olarak değerlerini IRepository'den alır.
      * where T : class -> GenericRepository'nin şartı T bir class olmalı.
      */
     public class GenericRepository<T> : IRepository<T> where T : class
@@ -44,6 +44,7 @@ namespace DataAccessLayer.Concrete.Repositories
         public void Insert(T p)
         {
             _object.Add(p);
+            c.SaveChanges();
         }
 
         public void Update(T p)

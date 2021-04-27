@@ -168,7 +168,7 @@
 
 ☑️ Bu derste `Abstract` ve `Interface` ifadeler ile çalışmaya başlayacağız. `CRUD` işlemlerinin temelini oluşturacağız. CRUD işlemlerinin temelini Interface'ler üzerinde oluşturacağız.
 
-☑️ `Interface'ler` : sınıflara rehberlik edecek yapılar olarak düşünebiliriz. Interface 'ler içerisinde direkt olarak `property` veya `field` tanımlaması tercihe edilen bir yöntem değildir. Onun yerine `metotlar` oluşturulur ve bu metotlar üzerinde işlemler gerçekleştirilir.
+☑️ `Interface'ler` : sınıflara rehberlik edecek yapılar olarak düşünebiliriz. Interface 'ler içerisinde direkt olarak `property` veya `field` tanımlaması tercih edilen bir yöntem değildir. Onun yerine `metotlar` oluşturulur ve bu metotlar üzerinde işlemler gerçekleştirilir.
 
 ☑️ **`DRY (Don't repeat yourself)`** : yazılım kalıplarının tekrarlanmasını (code duplication) ve buna bağlı olarak ortaya çıkabilecek fazlalıkların / karmaşanın önlenmesini amaçlayan bir yazılım geliştirme ilkesidir.
 
@@ -186,7 +186,7 @@
 
 ☑️ `EF` ve `ADO.NET` 
   ```
-   SaveChanges() => ExecuteNonQuery(); --> Update, Delete, Insert Into Islemleri
+   SaveChanges() => ExecuteNonQuery(); --> Insert, Update, Delete Islemleri
    ToList()      => ExecuteReader();   --> Select Islemleri
  ```
 
@@ -194,16 +194,17 @@
 
 ☑️ **15.Derste yapılan çalışmalar yanlıştır. [Detay için](https://www.youtube.com/watch?v=yFSzJbSbLDI&list=PLKnjBHu2xXNNQJehhCg--CzQQMHXTsFAb&index=15)**
 
-☑️ IRepository Interface
+☑️ **`IRepository Interface`**
    ```
      /* T : bir Entity 'i karşılar, bir türdür. SQL 'den gönderilecek Entity class'ı */
      public interface IRepository<T>
      {
          /* CRUD */
-         List<T> GetCategories();
-         void InsertCategory(T p);
-         void UpdateCategory(T p);
-         void DeleteCategory(T p);
+        List<T> Gets();
+        void Insert(T p);
+        void Update(T p);
+        void Delete(T p);
+        List<T> GetById(Expression<Func<T, bool>> filter);
      }
    ```
 
@@ -219,17 +220,51 @@
 
 ☑️ **`Generic Repository`** sınıfın sayesinde bütün sınıflardan, bütün interfacelerde geçerli olan mimari kuruldu.
 
+☑️ **Constructor** : oluşturduğumuz sınıfın ismi ile aynı isimde olan metodun ismi `Constructor` metot'dur.
+
+☑️ **`GenericRepository.cs`**
+   ```
+      public class GenericRepository<T> : IRepository<T> where T : class
+      {
+        Context c = new Context();
+        DbSet<T> _object;
+      
+        /*
+         * T değerine karşılık olarak gelecek sınıfı `constructor` - yapıcı metot ile bulacazki, _object 'e değer atalım.
+         */
+        public GenericRepository()
+        {
+           _object = c.Set<T>();
+        }
+        
+        public void Delete(T p)
+        { }
+        
+        public List<T> GetById(Expression<Func<T, bool>> filter)
+        { }
+      
+        public List<T> Gets()
+        { }
+      
+        public void Insert(T p)
+        { }
+
+        public void Update(T p)
+        { }
+      }
+   ```
+
 ☑️ `Mimarinin Amacı` : Kod tekrarından kurtulmak, işlemlerin daha düzenli bir şekilde ilerlemesi, böl parçala yönet yaklaşımı ile proje geliştirmektir.
 
 ## 19. Ders Video Notlarım - `Business Layer` 
 
 ☑️ **`Business Layer`** : genellikle işin geçerliliğinin ve kuralların kontrolü yapılır. CRUD veya Find işlemleri gerçekleştirilirken gönderdiğimiz şartların sağlanıp sağlanmadığının kontrolü `BusinessLayer'da` yapılır.
 
-☑️ **`BusinessLayer'a`** diğer katmanların referans olarak verilmesi gerekmektedir. `EntityLayer` ve `DataAccessLayer` katmanları referans olarak verilir. Bununla beraber `NuGet` üzerinden `EntityFramework` yüklenmelidir.
+☑️ **`BusinessLayer'a`** diğer katmanların referans olarak verilmesi gerekmektedir. `EntityLayer` ve `DataAccessLayer` katmanları **`References`** olarak verilir. Bununla beraber `NuGet` üzerinden `EntityFramework` yüklenmelidir.
 
-☑️ **`EntityLayer'da`** : herhangi bir katman referans verilmiyor.
+☑️ **`EntityLayer'da`** : herhangi bir katman **`References`** verilmiyor.
 
-☑️ **`DataAccessLayer'da`** : `EntityLayer` katmanı referans verilir.
+☑️ **`DataAccessLayer'da`** : `EntityLayer` katmanı **`References`** verilir.
 
 ☑️ **`UI'da`** : `BusinessLayer`, `DataAccessLayer` ve `EntityLayer` katmanları **`References`** olarak verilir.
 
@@ -237,6 +272,12 @@
 
 ☑️ `CategoryController.cs` tanımı yapıldı ve Index.cshtml `View` oluşturuldu.
 
-## 21. Ders Video Notlarım - `` 
+## 21. Ders Video Notlarım - `Bootstrap` 
+
+☑️ `Bootstrap` : html tarafında daha güçlü arayüzler oluşturmak için kullanılan bir bileşendir.
+
+☑️ `Bootstrap` ve `Css` daha güçlü arayüzler, daha güçlü tasarımlar elde edebilmek için kullanılıyor.
+
+## 22. Ders Video Notlarım - `` 
 
 ☑️ 
