@@ -1,0 +1,28 @@
+﻿@using EntityLayer.Concrete @* Html sayfasının içerisine `Concrete` dizinini dahil ettik. *@
+@model List<Category>
+@* Bir model oluşturuldu. `Model` verileri listelemek için kullanacağımız bileşendir. Html'de C#
+    ifadelerini kullanabilmek için ilgili ifadenin başınq @ sembolü konulur. Html'de @ sembolünün ismi `Razor Syntax` olarak adlandılır.  *@
+
+@{
+    Layout = null;
+}
+
+<link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+<br />
+<table class="table table-bordered">
+    <tr>
+        <th>Id</th>
+        <th>Name</th>
+        <th>Açıklama</th>
+        <th>Durum</th>
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr style="background: @(item.CategoryDescription != null ? "green" : "red"); color: white">
+            <td>@item.CategoryId</td>
+            <td>@item.CategoryName</td>
+            <td>@(item.CategoryDescription != null ? item.CategoryDescription : " --- ")</td>
+            <td>@item.CategoryStatus</td>
+        </tr>
+    }
+</table>

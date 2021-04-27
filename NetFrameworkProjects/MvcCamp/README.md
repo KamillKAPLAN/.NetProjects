@@ -266,7 +266,7 @@
 
 ☑️ **`DataAccessLayer'da`** : `EntityLayer` katmanı **`References`** verilir.
 
-☑️ **`UI'da`** : `BusinessLayer`, `DataAccessLayer` ve `EntityLayer` katmanları **`References`** olarak verilir.
+☑️ **`UI'da`** : `BusinessLayer`, `DataAccessLayer` ve `EntityLayer` katmanları **`References`** olarak verilir. Bununla beraber `NuGet` üzerinden `EntityFramework` yüklenmelidir.
 
 ## 20. Ders Video Notlarım - `Tablo Kullanımı (Sertifika Görev 1/4)` 
 
@@ -274,10 +274,70 @@
 
 ## 21. Ders Video Notlarım - `Bootstrap` 
 
-☑️ `Bootstrap` : html tarafında daha güçlü arayüzler oluşturmak için kullanılan bir bileşendir.
+☑️ **`Bootstrap`** : html tarafında daha güçlü arayüzler oluşturmak için kullanılan bir bileşendir.
 
-☑️ `Bootstrap` ve `Css` daha güçlü arayüzler, daha güçlü tasarımlar elde edebilmek için kullanılıyor.
+☑️ **`Bootstrap`** ve **`Css`** daha güçlü arayüzler, daha güçlü tasarımlar elde edebilmek için kullanılıyor.
 
-## 22. Ders Video Notlarım - `` 
+## 22. Ders Video Notlarım - `Kategorilerin Listelenmesi` 
 
-☑️ 
+☑️ Bu derste verileri `SQL` 'den çekeceğiz. Öncelikle `CategoryController.cs` dosyasına geliyoruz. Ardından `References` tan **`UI`** katmanına `BusinessLayer`, `DataAccessLayer` ve `EntityLayer` katmanlarını ekliyoruz. Bununla beraber `NuGet` üzerinden `EntityFramework` de eklenmelidir.
+
+☑️ **`var`** veri tipi `int`, `double`, `bool`, `string` kısacası hepsini kapsar.
+
+☑️ **`CategoryController.cs`**
+   ```
+    using BusinessLayer.Concrete;
+    using System.Web.Mvc;
+
+    public class CategoryController : Controller
+    {
+        CategoryManager cm = new CategoryManager();
+
+        public ActionResult GetCategoryList()
+        {
+            var categoryValues = cm.GetAllBL();
+            return View(categoryValues); /* categoryValues içindeki değerler View'e aktarılmış oldu. */
+        }
+    }
+   ``` 
+
+☑️ **@using EntityLayer.Concrete** : Html sayfasının içerisine `Concrete` dizinini dahil ettik.
+
+☑️ **@model List<Category>** : Bir model oluşturuldu. `Model` verileri listelemek için kullanacağımız bileşendir. Html'de C# ifadelerini kullanabilmek için ilgili ifadenin başınq @ sembolü konulur. Html'de @ sembolünün ismi `Razor Syntax` olarak adlandılır.
+
+☑️ **`GetCategoryList.cshtml`**
+   ```
+    @using EntityLayer.Concrete @* Html sayfasının içerisine `Concrete` dizinini dahil ettik. *@
+    @model List<Category>
+    @* Bir model oluşturuldu. `Model` verileri listelemek için kullanacağımız bileşendir. Html'de C#
+        ifadelerini kullanabilmek için ilgili ifadenin başınq @ sembolü konulur. Html'de @ sembolünün ismi `Razor Syntax` olarak adlandılır.  *@
+
+    @{
+        Layout = null;
+    }
+
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+    <br />
+    <table class="table table-bordered">
+        <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Açıklama</th>
+            <th>Durum</th>
+        </tr>
+        @foreach (var item in Model)
+        {
+            <tr style="background: @(item.CategoryDescription != null ? "green" : "red"); color: white">
+                <td>@item.CategoryId</td>
+                <td>@item.CategoryName</td>
+                <td>@(item.CategoryDescription != null ? item.CategoryDescription : " --- ")</td>
+                <td>@item.CategoryStatus</td>
+            </tr>
+        }
+    </table>
+   ```
+
+## 23. Ders Video Notlarım - `` 
+
+
+
