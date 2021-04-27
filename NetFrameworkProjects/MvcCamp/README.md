@@ -337,7 +337,12 @@
     </table>
    ```
 
-## 23. Ders Video Notlarım - `` 
+## 23. Ders Video Notlarım - `Break Point` 
 
+☑️ Proje **`Break Point`** ile çalıştırıldı ve adımları teker teker incelendi.
+
+## 24. Ders Video Notlarım - `` 
+
+☑️
 
 
