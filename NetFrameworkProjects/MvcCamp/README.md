@@ -341,8 +341,13 @@
 
 ☑️ Proje **`Break Point`** ile çalıştırıldı ve adımları teker teker incelendi.
 
-## 24. Ders Video Notlarım - `` 
+## 24. Ders Video Notlarım - `Yeni Kategori Ekleme` 
 
-☑️
+☑️ **`CategoryController.cs`** içinde `AddCategory` metodu yazıldı ve  `AddCategory.cshtml` View sayfası oluşturuldu.
 
+☑️ **Atribute** : uygulandıkları tiplerin (types) yada üyelerin (members) çalışma zamanındaki davranışlarının değiştirilmesine olanak sağlayan sınıflardır.
+
+## 25. Ders Video Notlarım - `` 
+
+☑️ 
 

@@ -1,4 +1,5 @@
 ﻿using BusinessLayer.Concrete;
+using EntityLayer.Concrete;
 using System.Web.Mvc;
 
 namespace EksiClone.UI.Controllers
@@ -17,6 +18,12 @@ namespace EksiClone.UI.Controllers
         {
             var categoryValues = cm.GetAllBL();
             return View(categoryValues); /* categoryValues içindeki değerler View'e aktarılmış oldu. */
+        }
+
+        public ActionResult AddCategory(Category cat)
+        {
+            cm.AddCategoryBL(cat);
+            return RedirectToAction("GetCategoryList"); /* Ekleme işlemi gerçekleştirildikten sonra yönlendirilecek View */
         }
     }
 }
