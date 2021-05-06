@@ -359,6 +359,14 @@
 
 ☑️ Video izlendi.
 
-## 27. Ders Video Notlarım - ``
+## 27. Ders Video Notlarım - `Business Abstract & ICategoryService`
 
-☑️ 
+☑️ Projeyi böl parçala yönet prensibi ile `SOLID'e` daha uygun  `Class` | sınıflarla ve bu sınıfların çıplak kalmaması için `Interface` tanımlanmalı ve bu sayede projeye olan hakimiyet artmaktadır.
+
+☑️ Her sınıf ve her metot sadece kendisine verilen görevi gerçekleştirmelidir. Başka bir işlem yapmammalıdır, buda `SOLID'e` uygunluğu göstermektedir.
+
+☑️ Projede yer alan bütün `tablolar` yada bütün `Class'lar` | `Sınıf'lar` için birer **`Manager`** sınıfı tanımlanacaktır. Manager sınıfında projenin doğruluğu ile ilgili kontroller sağlanır.
+
+## 28. Ders Video Notlarım - ``
+
+
