@@ -8,30 +8,17 @@ namespace BusinessLayer.Concrete
 {
     public class CategoryManager : ICategoryService
     {
+        /* Field */
         ICategoryDal _categoryDal;
+
+        public CategoryManager(ICategoryDal categoryDal)
+        {
+            _categoryDal = categoryDal;
+        }
 
         public List<Category> GetCategoryList()
         {
-            throw new System.NotImplementedException();
+            return _categoryDal.Gets();
         }
-
-        //GenericRepository<Category> repo = new GenericRepository<Category>();
-
-        //public List<Category> GetAllBL()
-        //{
-        //    return repo.Gets();
-        //}
-
-        //public void AddCategoryBL(Category p)
-        //{
-        //    if (p.CategoryName == "" || p.CategoryName.Length <= 3 || p.CategoryDescription == "" || p.CategoryName.Length > 51)
-        //    {
-        //        /* Hata Mesajı */
-        //    }
-        //    else
-        //    {
-        //        repo.Insert(p);
-        //    }
-        //}
     }
 }

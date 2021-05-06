@@ -367,6 +367,14 @@
 
 ☑️ Projede yer alan bütün `tablolar` yada bütün `Class'lar` | `Sınıf'lar` için birer **`Manager`** sınıfı tanımlanacaktır. Manager sınıfında projenin doğruluğu ile ilgili kontroller sağlanır.
 
-## 28. Ders Video Notlarım - ``
+## 28. Ders Video Notlarım - `Constructor Business Metot`
+
+☑️ **`Business`** tarafında olabildiğince `new` işlemi yapmaktan kaçınmalıyız ve projedeki bağımlılığı minimize hale getirmeliyiz.
+
+☑️ **`Dependency Injection`** - `Araştırma` : bağımlılık oluşturacak parçaların ayrılıp, bunların dışardan verilmesiyle sistem içerisindeki bağımlılığı minimize etme işlemidir. Yani, temel olarak oluşturacağınız bir sınıf içerisinde **başka bir sınıfın nesnesini kullanacaksanız new anahtar sözcüğüyle oluşturmamanız gerektiğini söyleyen bir yaklaşımdır.** Gereken nesnenin ya Constructor’dan ya da Setter metoduyla parametre olarak alınması gerektiğini vurgulamaktadır. Böylece iki sınıfı birbirinden izole etmiş olduğumuzu savunmaktadır.
+
+☑️ **`Dependency Injection`, bağımlılıkları soyutlamak demektir.** `DI` , aşağıdaki iki teknikle uygulanabilmektedir.
+ - `Constructor` Injection(Constructor Based Dependecy Injection)
+ - `Setter` Injection(Setter Based Dependency Injection)
 
 
