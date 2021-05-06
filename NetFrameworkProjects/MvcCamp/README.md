@@ -349,12 +349,16 @@
 
 ## 25. Ders Video Notlarım - `HttpGet ve HttpPost Attributeleri` 
 
+☑️ **`CategoryController.cs`** içinde daha önce tanımlamış olduğumuz `ActionResult` metotlarınında `Attribute` tanımları yapıldı.	
+
 ☑️ **[HttpGet]** : sayfa yüklendiği zaman çalışacak `Attribute`
 
 ☑️ **[HttpPost]** : sayfada bir butona tıklandığında, sayfada bir şeyler post edildiği zaman çalışacak `Attribute`
 
-## 26. Ders Video Notlarım - ``
+## 26. Ders Video Notlarım - `Ekleme Hataları`
 
-☑️ 
+☑️ Video izlendi.
+
+## 27. Ders Video Notlarım - ``
 
 ☑️ 
