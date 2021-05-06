@@ -484,6 +484,59 @@
      }
    ```
 
-## 32. Ders Video Notlarım - ``
+## 32. Ders Video Notlarım - `Validation Messagefor ile Validator Sınıfındaki Mesajlarının UI'da Listelenmesi`
+ 
+☑️ `Html Helper` : razor syntax ile birlite kullanılıyor. **@Html.** ile başlıyor karşımıza çıkan metotlar `Html Help Metot'lar` olarak adlandırılıyor. Html yardımcısı gibi...
 
-☑️ 
+☑️ `Not` :
+   ```
+     @* BeginForm() süslü parantezin altındaki kısımların nerede işlem gerçekleştireceğini ve ne zaman işlem gerçekleştireceğini tutacaktır.
+       1. Üzerinde çalıştırığımız Action ismi
+       2. Üzerinde çalıştığımız Controller ismi
+       3. FormMethod değeri 
+     *@
+     @using (Html.BeginForm("AddCategory", "Category", FormMethod.Post)) 
+   ```
+☑️ **`AddCategory.cshtml`**
+   ```
+    @model EntityLayer.Concrete.Category
+
+    @{
+        Layout = null;
+    }
+
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+
+    <h1>Yeni Kategori Ekleme Sayfası</h1>
+    <br />
+    @* BeginForm() süslü parantezin altındaki kısımların nerede işlem gerçekleştireceğini ve ne zaman işlem gerçekleştireceğini tutacaktır.
+       1. Üzerinde çalıştırığımız Action ismi
+       2. Üzerinde çalıştığımız Controller ismi
+       3. FormMethod değeri 
+    *@
+    @using (Html.BeginForm("AddCategory", "Category", FormMethod.Post)) 
+    {
+        <div class="form-group">
+            @Html.Label("Kategori Adı")
+            @Html.TextBoxFor(x => x.CategoryName)
+            @Html.ValidationMessageFor(x => x.CategoryName)
+            <br /><br />
+            @Html.Label("Açıklamayı Yazınız")
+            @Html.TextBox("CategoryDescription")
+            @Html.ValidationMessage("CategoryDescription")
+            <br /><br />
+            <button>Kaydet</button>
+        </div>
+    }
+
+    <!--<form class="form-group" method="post">
+        <input type="text" placeholder="Kategori Adı" name="CategoryName" class="form-control" />-->
+        @* input'un name değeri bizim DB'deki column yeri ile aynı olmalı.  *@
+        <!--<br />
+        <input type="text" placeholder="Açıklama Giriniz" name="CategoryDescription" class="form-control" />
+        <br />
+        <button class="btn btn-primary">Ekle</button>
+    </form>-->
+   ```
+
+## 33. Ders Video Notlarım - ``
