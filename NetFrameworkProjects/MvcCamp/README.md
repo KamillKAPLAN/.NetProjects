@@ -441,7 +441,7 @@
    ```
     namespace BusinessLayer.ValidationRules
     {
-        public class CategoryValidator : AbstractValidator<Category> /* üzerinde çalıştığımız sınıfı gönderdik. */
+        public class CategoryValidator : AbstractValidator<Category> /* AbstractValidator<T> T olara üzerinde çalıştığımız sınıfı gönderdik. */
         {
             /* `Validator` sınıfları içerisinde kullanacağımız doğrulama kurallarını bir `Constructor` metot içerisine yazmamız gerekmektedir. */
             public CategoryValidator()
@@ -457,9 +457,32 @@
     }  
    ```  
 
-## 31. Ders Video Notlarım - ``
+## 31. Ders Video Notlarım - `Validasyon İşlemi`
 
-☑️ 
+☑️ **`CategoryController.cs`**
+   ```
+     [HttpPost] /* sayfada bir butona tıklandığında, sayfada bir şeyler post edildiği zaman çalışacak. */
+     public ActionResult AddCategory(Category category)
+     {
+          CategoryValidator categoryValidator = new CategoryValidator();
+          /* CategoryValidator sınıfında olan değerlere göre doğruluk kontrolünü gerçekçeleştirilecek değer `category` */
+          ValidationResult validationResult = categoryValidator.Validate(category);
+          
+          if (validationResult.IsValid)
+          {
+             cm.CategoryAddBL(category);
+             return RedirectToAction("GetCategoryList"); /* Ekleme işlemi gerçekleştirildikten sonra yönlendirilecek View */
+          }
+          else
+          {
+             foreach (var item in validationResult.Errors)
+             {
+                ModelState.AddModelError(item.PropertyName, item.ErrorMessage);
+             }
+          }
+          return View();
+     }
+   ```
 
 ## 32. Ders Video Notlarım - ``
 

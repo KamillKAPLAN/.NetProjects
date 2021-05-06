@@ -15,9 +15,14 @@ namespace BusinessLayer.Concrete
             _categoryDal = categoryDal;
         }
 
-        public List<Category> GetCategoryList()
+        public List<Category> CategoryListBL()
         {
             return _categoryDal.Gets();
+        }
+
+        public void CategoryAddBL(Category category)
+        {
+            _categoryDal.Insert(category);
         }
     }
 }
