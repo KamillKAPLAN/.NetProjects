@@ -345,9 +345,16 @@
 
 ☑️ **`CategoryController.cs`** içinde `AddCategory` metodu yazıldı ve  `AddCategory.cshtml` View sayfası oluşturuldu.
 
-☑️ **Atribute** : uygulandıkları tiplerin (types) yada üyelerin (members) çalışma zamanındaki davranışlarının değiştirilmesine olanak sağlayan sınıflardır.
+☑️ **`Atribute`** - `Araştırma` : uygulandıkları tiplerin (types) yada üyelerin (members) çalışma zamanındaki davranışlarının değiştirilmesine olanak sağlayan sınıflardır.
 
-## 25. Ders Video Notlarım - `` 
+## 25. Ders Video Notlarım - `HttpGet ve HttpPost Attributeleri` 
+
+☑️ **[HttpGet]** : sayfa yüklendiği zaman çalışacak `Attribute`
+
+☑️ **[HttpPost]** : sayfada bir butona tıklandığında, sayfada bir şeyler post edildiği zaman çalışacak `Attribute`
+
+## 26. Ders Video Notlarım - ``
 
 ☑️ 
 
+☑️ 

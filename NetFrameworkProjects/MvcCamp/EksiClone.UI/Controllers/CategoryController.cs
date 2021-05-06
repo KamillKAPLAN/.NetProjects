@@ -20,6 +20,13 @@ namespace EksiClone.UI.Controllers
             return View(categoryValues); /* categoryValues içindeki değerler View'e aktarılmış oldu. */
         }
 
+        [HttpGet] /* sayfa yüklendiği zaman çalışacak `Attribute` */
+        public ActionResult AddCategory()
+        {
+            return View();
+        }
+
+        [HttpPost] /* sayfada bir butona tıklandığında, sayfada bir şeyler post edildiği zaman çalışacak. */
         public ActionResult AddCategory(Category cat)
         {
             cm.AddCategoryBL(cat);
