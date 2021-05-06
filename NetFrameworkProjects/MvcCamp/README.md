@@ -367,7 +367,42 @@
 
 ☑️ Projede yer alan bütün `tablolar` yada bütün `Class'lar` | `Sınıf'lar` için birer **`Manager`** sınıfı tanımlanacaktır. Manager sınıfında projenin doğruluğu ile ilgili kontroller sağlanır.
 
+☑️ **`ICategoryService.cs`**
+   ```
+    namespace BusinessLayer.Abstract
+    {
+        public interface ICategoryService
+        {
+            List<Category> GetCategoryList();
+        }
+    }
+   ```
+
 ## 28. Ders Video Notlarım - `Constructor Business Metot`
+
+☑️ **BusinessLayer.Concrete > CategoryManager.cs** dosyasında `Constructor(Yapıcı Metot)` ile `DI` tekniği kullanıldı.
+
+☑️ **`CategoryManager.cs`**
+   ```
+    namespace BusinessLayer.Concrete
+    {
+        public class CategoryManager : ICategoryService
+        {
+            /* Field */
+            ICategoryDal _categoryDal;
+    
+            public CategoryManager(ICategoryDal categoryDal)
+            {
+                _categoryDal = categoryDal;
+            }
+
+            public List<Category> GetCategoryList()
+            {
+                return _categoryDal.Gets();
+            }
+        }
+    }
+   ```
 
 ☑️ **`Business`** tarafında olabildiğince `new` işlemi yapmaktan kaçınmalıyız ve projedeki bağımlılığı minimize hale getirmeliyiz.
 
@@ -377,4 +412,27 @@
  - `Constructor` Injection(Constructor Based Dependecy Injection)
  - `Setter` Injection(Setter Based Dependency Injection)
 
+## 29. Ders Video Notlarım - `Entity Framework Dal`
 
+☑️ Katmanları, katmanlar içerisinde yer alan sınıfları birbirleri ile haberleştirdik bu sayede her katmanın yada her sınıfın veya her metodun içindeki komut sadece kendisine ait işlemleri gerçekleştirir.
+
+☑️ **`EfCategoryDal.cs`**
+   ```
+    namespace DataAccessLayer.EntityFramework
+    {
+      public class EfCategoryDal : GenericRepository<Category>, ICategoryDal
+      {
+      }
+    }
+   ```
+
+☑️ **`CategoryController.cs`**
+   ```
+    CategoryManager cm = new CategoryManager(new EfCategoryDal());
+   ```  
+
+## 30. Ders Video Notlarım - ``
+
+☑️ 
+
+☑️ 
